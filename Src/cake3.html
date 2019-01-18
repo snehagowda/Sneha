@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online catering orders</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+     ul {
+                 list-style-type:none;
+                 text-decoration:none;
+                 font-family:sans-serif;
+                 font-size:10px;
+                 padding-top:-50px;
+
+              }
+        li  {
+                 display: inline;
+                 padding-left:50px;
+          
+             }
+       a
+            {
+                 text-decoration:none;
+           
+             }
+body
+{
+          background-color:#FFFFCC;
+         background-size:cover;
+          -o-background-size:cover;
+          -moz-background-size:cover;
+         }
+
+.about
+{
+  margin-top:20px;
+}
+.image {
+    border-radius: 25px;
+    background: #FFFFCC;
+    -webkit-box-shadow: 0px 0px 20px #101010;
+   width:700px;height:470px;margin-top:20px;margin-bottom:20px;margin-left:40px;
+}  
+.bdayg1{border:1px brown; padding-top:100px; height: 500px;}
+    
+     #thumbnail{
+        border: 1px solid #b9b9b9;
+        height: 440px;
+        width: 500px;
+        margin: -70px 10px 0px 10px;
+        overflow: hidden;
+        -webkit-transition: all .5s;
+        border-radius: 5px;
+        float:left;
+        position: relative;
+    }
+  
+
+[type="button"]{
+            font-size: 20px;
+            font-family: sans-serif;
+            -webkit-transition: all .5s;
+            line-height: 40px;
+            color:#800000;
+-webkit-box-shadow: 0px 0px 20px #101010;
+            width: 120px;
+            text-align: center;           
+            margin-top:-20px;
+            padding-left:10px;
+background: transparent;
+         
+            
+}
+[type="button"]:hover{
+	        color:white ;
+            background: #800000;
+            cursor: pointer;
+}
+[type="button"]:focus{
+	outline-color: #79d0a7;
+    -webkit-box-shadow: 0px 0px 20px #101010;
+}
+.giftinfo{width:50%;float:right; position: relative; margin-right:50px;margin-top:-100px;}
+#thumbnail img{margin: 0px; height: 100%; width: 500px;}
+#giftname{  font-family:sans-serif;color:#7c4444; font-size:32px; padding: 25px;padding-left:20px;}
+#giftprice{font-family: arial; font-size: 30px; padding: 0px 0px 30px 20px;}
+.giftinfo hr{margin:0px 0px 20px 0px;}
+#title{font-family:sans-serif;color:#7c4444; font-size:20px; padding-left:20px;font-style:normal;}
+#specif-info{font-size: 16px; font-family:sans-serif; padding:10px 0px 45px 20px;}
+#dis-info{font-size:16px; font-family:sans-serif; padding:0px 0px 20px 20px;}
+/*------------------------ bdayg1 AREA END ----------------------------*/    
+
+</style>
+<body>
+<div style=" font-size: 20px;width: 100%;height: 95px;  ">
+       <img src="images/logo.png" style="float: left;width: 25%;margin-left: 1%;height:100%;">
+               <ul style="float: right"<li><a href="pastries.html"> <img src="images/backButton.gif" alt="home page"style="width:150px;height:52px;margin-top:20px;margin-right:20px;"></a></li>
+              </ul>
+</div>
+ <hr>
+<div class="bdayg1">
+
+	<div id="thumbnail">
+   		 <img id="imgs" src="images/cakes/cake3.jpg">
+    </div> <!-- thumbnail -->
+
+	<div class="giftinfo">	
+		<p id="giftname">WHITE FOREST PASTRY</p>
+		<p id="giftprice">Rs.1000(per Kg)</p>
+		<hr>
+		<p id="title">SPECIFICATIONS</p>
+		<p id="specif-info">Vanilla Creamed White chocolate Pastries.</p>
+                                      <p  style="font-family:sans-serif;color:#7c4444; font-size:20px; padding-left:20px;font-style:normal;margin-left:5px;margin-top:-40px;">Number of KG(s):  <input type="number" style="margin-top:-40px;"name="quantity" min="2" max="10" ><br>
+		<p id="title">DESCRIPTION</p>
+		<p id="dis-info">Bring a smile on your dear one's face as you surprise her or him with this beautifulcake.
+		                 This cake  contains cherry toppings and wonderful taste. It
+		                 will make the birthday celebration extra special.</p>
+		<a href="#"><input onclick="show()" type="button" value="Order Now" style="padding-right:40px;float:right; position: relative;" ></a>	
+	</div>
+</div><!-- bdayg1 END -->
+<hr>
+<div class="rights">
+          <p style="color:#800000; font-family:sans-serif;font-size:12px; font font-style: italic;margin-left:0px;float:right;margin-top:2px;"> 
+         Copyright  &copy; 2016 SnowCodes. All rights reserved</p>
+</div>
+</body>
+</html>
+

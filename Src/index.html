@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<title>Online catering orders</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+.mySlides 
+	{
+	   display:none;
+	   border-radius: 25px;
+                      padding: 10px;
+                      -webkit-box-shadow: 0px 0px 20px #101010;
+	
+	}
+.images
+	{
+	  margin-right:100px;
+                 
+                 }
+
+     ul {
+                 list-style-type:none;
+                 text-decoration:none;
+                 font-family:sans-serif;
+                 font-size:10px;
+                 padding-top:-50px;
+
+              }
+        li  {
+                 display: inline;
+                 padding-left:50px;
+          
+             }
+       a
+            {
+                 text-decoration:none;
+           
+             }
+body
+{
+          background-color:#FFFFCC;
+         background-size:cover;
+          -o-background-size:cover;
+          -moz-background-size:cover;
+}
+.nav{
+        position: absolute; 
+        left:75%;
+        top: 36%;
+        -webkit-box-shadow: 0px 0px 20px #101010; 
+        height: 50px;
+        width: 300px;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .nav:hover{
+        height: auto;
+    }
+    
+    .nav ul li a{
+        text-decoration: none;
+        color:#800000;
+        font-family:sans-serif;
+        font-size: 18px;
+        font font-style: italic;
+        
+    }
+    .nav ul li a:hover{
+        color: #FF4500;
+    }
+    
+    .nav ul{
+        padding-top: 10px;
+    }
+    
+    .nav ul li{
+        padding-top: 20px;
+        list-style: none;
+    }
+   
+    .nav ul li:hover{
+        padding-left:10px;
+    }
+.about
+{
+  margin-top:20px;
+}
+
+</style>
+<body>
+
+ <div style=" font-size: 20px;width: 100%;height: 95px;  ">
+       <img src="images/logo.png" style="float: left;width: 25%;margin-left: 1%;height:100%;">
+               <ul style="float: right">
+                     <li><a href="#home"> <img src="images/home.png" alt="home page"style="width:150px;height:52px;margin-top:20px;-webkit-box-shadow: 0px 0px 20px #101010;"></a></li>
+                     <li><a href="#signup"><img src="images/login.png" alt="login page"style="width:150px;height:52px; -webkit-box-shadow: 0px 0px 20px #101010;" ></a></li>
+                     <li><a href="#login"><img src="images/sign up.png" alt="sign page"style="width:150px;height:52px;-webkit-box-shadow: 0px 0px 20px #101010;"></li>
+                     <li><a href="contact.html"><img src="images/contact us.png" alt="contact page"style="width:200px;height:52px;-webkit-box-shadow: 0px 0px 20px #101010;"></a></li>
+              </ul>
+</div>
+ <hr>
+<div class="container" style="margin:30px 40px 20px;">
+<div class="images" style="width:800px;height:400px;padding-left:15px;padding-top:5px;">
+  <img class="mySlides" src="images/1.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/2.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/7.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/4.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/5.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/6.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/8.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/10.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/9.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/12.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/11.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/13.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/14.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/15.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/16.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/18.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/17.jpg" style="width:800px;height:400px;">
+  <img class="mySlides" src="images/19.jpg" style="width:800px;height:400px;">
+</div>
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel()
+ {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) 
+    {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000); // Change image every 4 seconds
+}
+</script>
+<div class="nav">
+    <div class="category">
+         <img src="images/categ.png" alt="category"style="height: 50px;width:250px;align:center;padding-left:20px;">
+        <ul>
+            <li><a href="marriage.html">Marriage Food Combos</a></li> <hr>
+            <li><a href="bday.html">Birthday Party Buffet</a></li> <hr>
+            <li><a href="#"> Get together Lunch</a></li><hr>
+            <li><a href="#"> Naming Cermoney Buffet</a></li><hr>
+             <li><a href="#">Business Meeting Buffet</a></li><hr>
+        </ul>     
+     </div>   
+</div> 
+<img src="images/abt us.png" alt="about"style="height: 30px;width:150px;align:center;margin-left:60px;padding-top:30px;">
+<div class="about">
+          <p style="color:#800000; font-family:sans-serif;font-size: 18px; font font-style: italic;margin-left:80px;padding-top:-20px;"> 
+          Catering Services include everything within the world of food and hospitality.An in-house food service<br> outlet
+          or cafe is a great way to promote staff wellbeing.In addition to providing a space to re-energize<br> and 
+         socialise, it can help boost productivity by reducing the time spent elsewhere acquiring food.We<br> also offer Vending Services,
+         Events Catering and Cafe Services.</p>
+</div>
+<hr>
+<div class="rights">
+          <p style="color:#800000; font-family:sans-serif;font-size:12px; font font-style: italic;margin-left:0px;float:right;margin-top:2px;"> 
+         Copyright  &copy; 2016 SnowCodes. All rights reserved</p>
+</div>
+</body>
+</html>
+
