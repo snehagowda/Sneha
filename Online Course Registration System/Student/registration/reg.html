@@ -1,0 +1,452 @@
+<html>
+<head>
+<title>Student Registration Form</title>
+</head>
+ 
+<body>
+<h3>STUDENT REGISTRATION FORM</h3>
+<form>
+ 
+<table align="center" cellpadding = "10">
+ 
+<!----- First Name ---------------------------------------------------------->
+<tr>
+<td>Name</td>
+<td><input type="text" name="First_Name" maxlength="30"/>
+</td>
+</tr>
+ 
+<!----- Last Name ---------------------------------------------------------->
+<tr>
+<td>USN</td>
+<td><input type="text" name="Last_Name" maxlength="30"/>
+</td>
+</tr>
+ 
+<!----- Date Of Birth -------------------------------------------------------->
+<tr>
+<td>Academic Year</td>
+ 
+<td>
+ 
+<select name="acc_Year1" id="acc_Year1">
+ 
+<option value="-1">Year:</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+
+</select>
+ To 
+<select name="acc_Year2" id="acc_Year2">
+ 
+<option value="-1">Year:</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+
+</select>
+</td>
+</tr>
+
+<!----- Course ---------------------------------------------------------->
+<tr>
+<td>Semester Type</td>
+<td>
+Odd
+<input type="radio" name="Course_BCA" value="Odd">
+Even
+<input type="radio" name="Course_BCom" value="Even">
+Fast Track
+<input type="radio" name="Course_BSc" value="Fast Track">
+
+</td>
+</tr>
+    
+<!----- Email Id ---------------------------------------------------------->
+<tr>
+<td>Department</td>
+<td><input type="text" name="Email_Id" maxlength="100" /></td>
+</tr>
+ 
+<!----- Mobile Number ---------------------------------------------------------->
+<tr>
+<td>Semester</td>
+<td>
+<input type="text" name="Mobile_Number" maxlength="10" />
+</td>
+</tr>
+ 
+<!----- Gender ----------------------------------------------------------->
+<tr>
+<td>Section</td>
+<td>
+<input type="text" name="Mobile_Number" maxlength="10" />
+</td>
+</tr>
+ 
+<!----- Qualification---------------------------------------------------------->
+<tr>
+<td></td>
+ 
+<td>
+<table>
+                    <tr>
+                        <td><b>Sl.No.</b></td>
+                        <td><b>Course Title</b></td>
+                        <td><b>Course Code</b></td>
+                        <td><b>Registration Type</b></td>
+                        <td><b>Attempt number</b></td>
+                        <td><b>Credits</b></td>
+                    </tr>
+ 
+                        
+                        
+                    <tr>
+                        <td>1</td>
+                        
+                        <td><select id="sel_title" onchange="remove_dup(this)">
+                                <option value="0">- Select Title -</option>
+                                <?php 
+                                // Fetch Course
+                                $sql_course = "SELECT * FROM course";
+                                $course_data = mysqli_query($con,$sql_course);
+                                while($row = mysqli_fetch_assoc($course_data) ){
+                                $courseid = $row['id'];
+                                $c_title = $row['c_title'];
+              
+                                // Option
+                                echo "<option value='".$courseid."' class='{$courseid}' >".$c_title."</option>";
+                                }
+                                ?>
+                            </select>
+                        </td>
+ 
+                        
+                        <td><select id="sel_code">
+                            <option value="0">- Select Code -</option>
+                        </select></td>
+                        <td><select name="rt1" id = "rrty1" />
+                            <option value="-1">Select Registration Type</option>
+                            <option value="1">Regular</option>
+                            <option value="2">Re-register</option></td>
+                        <td><select name="att_nm1" id = "atmt1" />
+                        <option value="-1">Select Attempt</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </td>
+                        <td><select id="sel_cred">
+                                <option value="0">- Select Credits -</option>
+                            </select></td>
+                    </tr>
+                        
+                        
+                        
+                    <tr>
+                        <td>2</td>
+                        
+                        <td><select id="sel_title2" onchange="remove_dup(this)">
+                                <option value="0">- Select Title -</option>
+                                <?php 
+                                // Fetch Course
+                                $sql_course = "SELECT * FROM course";
+                                $course_data = mysqli_query($con,$sql_course);
+                                while($row = mysqli_fetch_assoc($course_data) ){
+                                $courseid = $row['id'];
+                                $c_title = $row['c_title'];
+              
+                                // Option
+                                echo "<option value='".$courseid."' class='{$courseid}' >".$c_title."</option>";
+                                }
+                                ?>
+                            </select>
+                        </td>
+ 
+                        
+                        <td><select id="sel_code2">
+                            <option value="0">- Select Code -</option>
+                        </select></td>
+                        <td><select name="rt1" id = "rrty1" />
+                            <option value="-1">Select Registration Type</option>
+                            <option value="1">Regular</option>
+                            <option value="2">Re-register</option></td>
+                        <td><select name="att_nm1" id = "atmt1" />
+                        <option value="-1">Select Attempt</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </td>
+                        <td><select id="sel_cred2">
+                                <option value="0">- Select Credits -</option>
+                            </select></td>
+                        
+                    </tr>
+                        
+                        <tr>
+                        <td>3</td>
+                        
+                        <td><select id="sel_title3" onchange="remove_dup(this)">
+                                <option value="0">- Select Title -</option>
+                                <?php 
+                                // Fetch Course
+                                $sql_course = "SELECT * FROM course";
+                                $course_data = mysqli_query($con,$sql_course);
+                                while($row = mysqli_fetch_assoc($course_data) ){
+                                $courseid = $row['id'];
+                                $c_title = $row['c_title'];
+              
+                                // Option
+                                echo "<option value='".$courseid."' class='{$courseid}' >".$c_title."</option>";
+                                }
+                                ?>
+                            </select>
+                        </td>
+ 
+                        
+                        <td><select id="sel_code3">
+                            <option value="0">- Select Code -</option>
+                        </select></td>
+                        <td><select name="rt1" id = "rrty1" />
+                            <option value="-1">Select Registration Type</option>
+                            <option value="1">Regular</option>
+                            <option value="2">Re-register</option></td>
+                        <td><select name="att_nm1" id = "atmt1" />
+                        <option value="-1">Select Attempt</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </td>
+                        <td><select id="sel_cred3">
+                                <option value="0">- Select Credits -</option>
+                            </select></td>
+                        
+                    </tr>
+                        
+                    <tr>
+                        <td>4</td>
+                        
+                        <td><select id="sel_title4" onchange="remove_dup(this)">
+                                <option value="0">- Select Title -</option>
+                                <?php 
+                                // Fetch Course
+                                $sql_course = "SELECT * FROM course";
+                                $course_data = mysqli_query($con,$sql_course);
+                                while($row = mysqli_fetch_assoc($course_data) ){
+                                $courseid = $row['id'];
+                                $c_title = $row['c_title'];
+              
+                                // Option
+                                echo "<option value='".$courseid."' class='{$courseid}' >".$c_title."</option>";
+                                }
+                                ?>
+                            </select>
+                        </td>
+ 
+                        
+                        <td><select id="sel_code4">
+                            <option value="0">- Select Code -</option>
+                        </select></td>
+                        <td><select name="rt1" id = "rrty1" />
+                            <option value="-1">Select Registration Type</option>
+                            <option value="1">Regular</option>
+                            <option value="2">Re-register</option></td>
+                        <td><select name="att_nm1" id = "atmt1" />
+                        <option value="-1">Select Attempt</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </td>
+                        <td><select id="sel_cred4">
+                                <option value="0">- Select Credits -</option>
+                            </select></td>
+                        
+                    </tr> 
+                        
+                     <tr>
+                        <td>5</td>
+                        
+                        <td><select id="sel_title5" onchange="remove_dup(this)">
+                                <option value="0">- Select Title -</option>
+                                <?php 
+                                // Fetch Course
+                                $sql_course = "SELECT * FROM course";
+                                $course_data = mysqli_query($con,$sql_course);
+                                while($row = mysqli_fetch_assoc($course_data) ){
+                                $courseid = $row['id'];
+                                $c_title = $row['c_title'];
+              
+                                // Option
+                                echo "<option value='".$courseid."' class='{$courseid}' >".$c_title."</option>";
+                                }
+                                ?>
+                            </select>
+                        </td>
+ 
+                        
+                        <td><select id="sel_code5">
+                            <option value="0">- Select Code -</option>
+                        </select></td>
+                        <td><select name="rt1" id = "rrty1" />
+                            <option value="-1">Select Registration Type</option>
+                            <option value="1">Regular</option>
+                            <option value="2">Re-register</option></td>
+                        <td><select name="att_nm1" id = "atmt1" />
+                        <option value="-1">Select Attempt</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </td>
+                        <td><select id="sel_cred5">
+                                <option value="0">- Select Credits -</option>
+                            </select></td>
+                        
+                    </tr> 
+                        
+                    <tr>
+                        <td>6</td>
+                        
+                        <td><select id="sel_title6" onchange="remove_dup(this)">
+                                <option value="0">- Select Title -</option>
+                                <?php 
+                                // Fetch Course
+                                $sql_course = "SELECT * FROM course";
+                                $course_data = mysqli_query($con,$sql_course);
+                                while($row = mysqli_fetch_assoc($course_data) ){
+                                $courseid = $row['id'];
+                                $c_title = $row['c_title'];
+              
+                                // Option
+                                echo "<option value='".$courseid."' class='{$courseid}' >".$c_title."</option>";
+                                }
+                                ?>
+                            </select>
+                        </td>
+ 
+                        
+                        <td><select id="sel_code6">
+                            <option value="0">- Select Code -</option>
+                        </select></td>
+                        <td><select name="rt1" id = "rrty1" />
+                            <option value="-1">Select Registration Type</option>
+                            <option value="1">Regular</option>
+                            <option value="2">Re-register</option></td>
+                        <td><select name="att_nm1" id = "atmt1" />
+                        <option value="-1">Select Attempt</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </td>
+                        <td><select id="sel_cred6">
+                                <option value="0">- Select Credits -</option>
+                            </select></td>
+                        
+                    </tr> 
+    
+                    <tr>
+                        <td>7</td>
+                        
+                        <td><select id="sel_title7" onchange="remove_dup(this)">
+                                <option value="0">- Select Title -</option>
+                                <?php 
+                                // Fetch Course
+                                $sql_course = "SELECT * FROM course";
+                                $course_data = mysqli_query($con,$sql_course);
+                                while($row = mysqli_fetch_assoc($course_data) ){
+                                $courseid = $row['id'];
+                                $c_title = $row['c_title'];
+              
+                                // Option
+                                echo "<option value='".$courseid."' class='{$courseid}' >".$c_title."</option>";
+                                }
+                                ?>
+                            </select>
+                        </td>
+ 
+                        
+                        <td><select id="sel_code7">
+                            <option value="0">- Select Code -</option>
+                        </select></td>
+                        <td><select name="rt1" id = "rrty1" />
+                            <option value="-1">Select Registration Type</option>
+                            <option value="1">Regular</option>
+                            <option value="2">Re-register</option></td>
+                        <td><select name="att_nm1" id = "atmt1" />
+                        <option value="-1">Select Attempt</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </td>
+                        <td><select id="sel_cred7">
+                                <option value="0">- Select Credits -</option>
+                            </select></td>
+                        
+                    </tr> 
+    
+                    <tr>
+                        <td>8</td>
+                        
+                        <td><select id="sel_title8" onchange="remove_dup(this)">
+                                <option value="0">- Select Title -</option>
+                                <?php 
+                                // Fetch Course
+                                $sql_course = "SELECT * FROM course";
+                                $course_data = mysqli_query($con,$sql_course);
+                                while($row = mysqli_fetch_assoc($course_data) ){
+                                $courseid = $row['id'];
+                                $c_title = $row['c_title'];
+              
+                                // Option
+                                echo "<option value='".$courseid."' class='{$courseid}' >".$c_title."</option>";
+                                }
+                                ?>
+                            </select>
+                        </td>
+ 
+                        
+                        <td><select id="sel_code8">
+                            <option value="0">- Select Code -</option>
+                        </select></td>
+                        <td><select name="rt1" id = "rrty1" />
+                            <option value="-1">Select Registration Type</option>
+                            <option value="1">Regular</option>
+                            <option value="2">Re-register</option></td>
+                        <td><select name="att_nm1" id = "atmt1" />
+                        <option value="-1">Select Attempt</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </td>
+                        <td><select id="sel_cred8">
+                                <option value="0">- Select Credits -</option>
+                            </select></td>
+                        
+                    </tr> 
+                    
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                        
+                    <tr>
+                            <td colspan="2" align="center">TOTAL NUMBER OF COURSES</td>
+                            <td><input type="text" name="tnm_cs" maxlength="10" /></td>
+                            <td>     </td>
+                            <td align="center">TOTAL NUMBER OF COURSES</td>
+                            <td><input type="text" name="tnm_cs" maxlength="10" /></td>
+                   </tr>
+    
+    <!----- Submit and Reset ------------------------------------------------->
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</td>
+</tr>
+
+        </table>
+</tr>
+    </table>
+</form>
+</body>
+</html>

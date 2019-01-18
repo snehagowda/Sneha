@@ -1,0 +1,165 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+header
+{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(pic1.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position:center;
+    -o-background-size:cover;
+    -moz-background-size:cover;
+    
+}
+.main-nav
+{
+    float: right;
+    list-style: none;
+    margin-top: 30px;    
+}
+.main-nav li
+{
+    display:inline-block;
+}
+.main-nav li a
+{
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+}
+
+.main-nav li.active a
+{
+    border: 1px solid white;
+    
+}
+
+.main-nav li a:hover
+{
+    border: 1px solid white;
+    transition: all 0.5s ease-in;
+    background-color: darkorange;
+  
+}
+
+.logo img
+{
+    width: 100px;
+    height: auto;
+    float: left;
+    background-color: white;
+    
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1px;
+    margin-top: 15px
+    
+}
+
+body
+{
+    font-family: monospace;
+    background-size:cover;
+          -o-background-size:cover;
+          -moz-background-size:cover;
+}
+
+.row
+{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero
+{
+    padding-top:20px;
+    width: 1200px;
+    margin-left:5px;
+    margin-top:0;    
+}
+
+h1
+{
+    color: white;
+    text-transform: uppercase;
+    font-size: 70px;
+    text-align: center;
+    margin-top: 55px;
+    padding-top: -25px;
+    padding-bottom: 200px;
+}
+
+.button
+{
+    margin-top: 30px;
+    margin-left: 400px;
+    
+    
+}
+
+.btn
+{
+    border: 1px solid white;
+    padding: 10px 30px;
+    padding-left: 30px;
+    color:black;
+    text-decoration: none;
+    margin-right: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.btn-one
+{
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+        font-size:15px:
+}
+
+.btn-one:hover
+{
+    background-color: darkorange;
+    transition: all 0.5s ease-in;
+}
+
+.btn-two
+{
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    
+}
+
+.btn-two:hover
+{
+    background-color: darkorange;
+    transition: all 0.5s ease-in;
+}
+.btn-three
+{
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+        font-size: 15px;     
+}
+
+.btn-three:hover
+{
+    background-color: darkorange;
+    transition: all 0.5s ease-in;
+}
+.btn-four
+{
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+     font-size: 15px;
+}
+
+.btn-four:hover
+{
+    background-color: darkorange;
+    transition: all 0.5s ease-in;
+}

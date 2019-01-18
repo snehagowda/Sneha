@@ -1,0 +1,18 @@
+Project Name: Online course registration system
+Description :
+Recently, many colleges have moved from manual course registration process to web-based course
+registration process that allows students to register for courses prescribed for that particular
+semester. As more colleges follow this trend and begin to only offer online registration, it will
+become increasingly important for these systems to be considered usable by all students. In
+addition to the system being usable, it must also provide the student with convenient access to
+information that will ease the course registering process.
+
+The idea for the project was mostly motivated by the online registration system offered by many
+other colleges. It seems unacceptable that large colleges would have a system that offers such a
+low level of flexibility and lacks functionality to make the process easier for the students.
+Combining our knowledge of other course registration systems, we came up with a list of features
+that are important to an online course registration system.
+
+Languages used : PHP, HTML, JavaScript, CSS
+Created by: Sneha V K 
+College: BMS College Of Engineering, Bangalore
